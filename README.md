@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Solid Lab (sldev.kr)
 
-## Getting Started
+**Solid Lab**의 공식 웹사이트 리포지토리입니다.
+일상 속의 불편함을 해결하는 견고하고 심플한 소프트웨어를 만듭니다.
 
-First, run the development server:
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+
+## 🚀 Projects
+
+### 1. BOJ Extension (VS Code)
+
+백준(BOJ) 문제 풀이를 위한 VS Code 확장 프로그램입니다.
+
+- [Marketplace Link](https://marketplace.visualstudio.com/items?itemName=dltkdgns00.BOJ-EX)
+- [GitHub Repository](https://github.com/dltkdgns00/BOJ-extension)
+
+### 2. YTMusic Sharer
+
+유튜브 뮤직의 현재 재생 정보를 공유하는 유틸리티입니다.
+
+- [GitHub Repository](https://github.com/dltkdgns00/ytmusic-sharer)
+
+## 💻 Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
