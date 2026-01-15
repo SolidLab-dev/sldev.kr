@@ -20,7 +20,7 @@
 
 ### 2. YTMusic Sharer
 
-유튜브 뮤직의 현재 재생 정보를 공유하는 유틸리티입니다.
+유튜브 뮤직에서 썸네일과 함께 공유하는 유틸리티입니다.
 
 - [GitHub Repository](https://github.com/dltkdgns00/ytmusic-sharer)
 
