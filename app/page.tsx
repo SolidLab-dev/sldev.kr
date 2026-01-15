@@ -3,9 +3,9 @@ import Image from "next/image";
 import {
   ArrowRight,
   CheckCircle2,
-  Layers,
+  Blocks,
   Smartphone,
-  Sparkles,
+  Music,
   Mail,
   Github,
 } from "lucide-react";
@@ -121,7 +121,7 @@ export default function Home() {
 
               <div className="relative h-full bg-[#050505] rounded-[22px] p-8 flex flex-col">
                 <div className="w-12 h-12 rounded-2xl bg-[#0076DD]/20 flex items-center justify-center text-[#0076DD] mb-6">
-                  <Layers size={24} />
+                  <Blocks size={24} />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-2">
@@ -136,7 +136,7 @@ export default function Home() {
 
                 <div className="flex items-center gap-4 mt-auto border-t border-white/5 pt-6">
                   <span className="flex items-center gap-2 text-xs font-medium px-3 py-1 rounded-full bg-white/5 text-gray-300">
-                    <Layers size={12} /> VS Code Extension
+                    <Blocks size={12} /> VS Code Extension
                   </span>
                   <div className="ml-auto flex items-center gap-4">
                     <a
@@ -167,7 +167,7 @@ export default function Home() {
 
               <div className="relative h-full bg-[#050505] rounded-[22px] p-8 flex flex-col">
                 <div className="w-12 h-12 rounded-2xl bg-purple-500/20 flex items-center justify-center text-purple-400 mb-6">
-                  <Sparkles size={24} />
+                  <Music size={24} />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-2">
