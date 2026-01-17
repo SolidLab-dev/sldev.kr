@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { clsx } from "clsx";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Solid Lab | Commit Your Work",
@@ -27,11 +28,10 @@ export default function RootLayout({
   return (
     <html lang="ko" className="dark">
       <body
-        className={clsx(
-          "min-h-screen bg-background text-foreground font-sans"
-        )}
+        className={clsx("min-h-screen bg-background text-foreground font-sans")}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
