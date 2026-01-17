@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Github, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -45,7 +46,22 @@ export default function Footer() {
             <p className="text-muted-foreground/60">
               Copyright © SolidLab. All rights reserved.
             </p>
-            {/* Optional Social Icons or additional branding could go here */}
+            <div className="flex gap-4">
+              <a
+                href="https://github.com/SolidLab-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Github size={18} />
+              </a>
+              <a
+                href="mailto:contact@sldev.kr"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Mail size={18} />
+              </a>
+            </div>
           </div>
         </div>
       </div>

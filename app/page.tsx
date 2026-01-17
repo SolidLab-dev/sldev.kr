@@ -264,41 +264,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="py-12 border-t border-white/10 bg-[#020202]">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-lg text-white tracking-tight">
-                Solid Lab
-              </span>
-              <span className="text-xs text-gray-500 px-2 border-l border-gray-800">
-                Since 2025
-              </span>
-            </div>
-
-            <div className="text-sm text-gray-500">
-              &copy; 2026 Solid Lab. All rights reserved.
-            </div>
-
-            <div className="flex gap-6">
-              <a
-                href="https://github.com/SolidLab-dev"
-                className="text-gray-500 hover:text-[#0076DD] transition-colors"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href="mailto:contact@sldev.kr"
-                className="text-gray-500 hover:text-[#0076DD] transition-colors"
-              >
-                <Mail size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
