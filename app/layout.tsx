@@ -1,22 +1,27 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { clsx } from "clsx";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Solid Lab | Commit Your Work",
-  description: "We Build Solid Software. VS Code Extensions & Developer Tools.",
+  title: "SolidLab | Software Engineering Archive",
+  description:
+    "SolidLab은 일상의 비효율과 반복적인 문제를 단단한 소프트웨어로 풀어내는 독립 엔지니어링 스튜디오입니다.",
   keywords: [
-    "Solid Lab",
+    "SolidLab",
+    "솔리드랩",
+    "Software Engineering",
+    "On-device AI",
     "Developer Tools",
-    "VS Code Extension",
-    "Software Development",
-    "Baekjoon",
+    "Ark",
+    "KkiniPig",
+    "ZeroGStudio",
+    "BOJ Extension",
   ],
   openGraph: {
-    title: "Solid Lab",
-    description: "Commit Your Work. 견고한 소프트웨어를 만듭니다.",
+    title: "SolidLab | Software Engineering Archive",
+    description: "Commit Your Work. 견고하고 명쾌한 소프트웨어를 연구하고 제작합니다.",
     type: "website",
+    url: "https://sldev.kr",
   },
 };
 
@@ -27,9 +32,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className="dark">
-      <body
-        className={clsx("min-h-screen bg-background text-foreground font-sans")}
-      >
+      <head>
+        <link
+          rel="stylesheet"
+          as="style"
+          crossOrigin="anonymous"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        />
+      </head>
+      <body className="min-h-screen bg-background text-foreground font-sans antialiased selection:bg-[#0076dd] selection:text-white">
         {children}
         <Footer />
       </body>

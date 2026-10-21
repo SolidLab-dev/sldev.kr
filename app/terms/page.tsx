@@ -1,13 +1,24 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "이용약관 | Solid Lab",
+  title: "이용약관 | SolidLab",
 };
 
 export default function TermsPage() {
   return (
-    <main className="container mx-auto px-4 py-12 max-w-4xl">
-      <h1 className="text-3xl font-bold mb-8">이용약관</h1>
+    <main className="container mx-auto px-6 py-12 max-w-4xl min-h-screen">
+      <div className="mb-8">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-1.5 font-mono text-xs text-neutral-400 hover:text-white transition-colors"
+        >
+          <ArrowLeft size={14} />
+          <span>BACK TO ARCHIVE</span>
+        </Link>
+      </div>
+      <h1 className="text-2xl md:text-3xl font-bold mb-8 text-neutral-100">이용약관</h1>
       <div className="prose prose-sm md:prose-base dark:prose-invert max-w-none whitespace-pre-wrap leading-relaxed text-muted-foreground">
         {`제1조(목적)
 이 약관은 솔리드랩(SolidLab)(전자상거래 사업자)이 운영하는 사이트(이하 "몰"이라 한다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를 이용함에 있어 사이버 몰과 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.
