@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
-import { projects } from "@/data/projects";
+import { getProjects } from "@/lib/notion";
 
-export default function Home() {
+export const revalidate = 300;
+
+export default async function Home() {
+  const projects = await getProjects();
   const inDevProjects = projects.filter((p) => p.category === "In Development");
   const archivedProjects = projects.filter((p) => p.category === "Archived");
 
@@ -209,7 +212,7 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <div className="pt-4 border-t border-neutral-900 flex items-center justify-between font-mono text-xs">
+                  <div className="pt-4 border-t border-neutral-900 flex flex-wrap items-center gap-4 font-mono text-xs">
                     {project.links && project.links.length > 0 ? (
                       project.links.map((link) => (
                         <a
@@ -219,7 +222,9 @@ export default function Home() {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 text-[#0076DD] hover:underline underline-offset-4 font-medium"
                         >
-                          <span>{link.label} Service</span>
+                          <span>
+                            {link.label === "Live" ? "Live Service" : link.label}
+                          </span>
                           <ArrowUpRight size={14} />
                         </a>
                       ))
@@ -335,18 +340,20 @@ export default function Home() {
                     </td>
                     <td className="py-4 px-5 font-mono text-xs text-right align-top">
                       {project.links && project.links.length > 0 ? (
-                        project.links.map((link) => (
-                          <a
-                            key={link.url}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-[#0076DD] hover:underline underline-offset-4"
-                          >
-                            <span>{link.label}</span>
-                            <ArrowUpRight size={12} />
-                          </a>
-                        ))
+                        <div className="flex flex-wrap justify-end gap-3">
+                          {project.links.map((link) => (
+                            <a
+                              key={link.url}
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-[#0076DD] hover:underline underline-offset-4"
+                            >
+                              <span>{link.label}</span>
+                              <ArrowUpRight size={12} />
+                            </a>
+                          ))}
+                        </div>
                       ) : (
                         <span className="text-neutral-700">-</span>
                       )}
@@ -389,7 +396,7 @@ export default function Home() {
                 </div>
 
                 {project.links && project.links.length > 0 && (
-                  <div className="pt-2 border-t border-neutral-900 font-mono text-xs">
+                  <div className="pt-2 border-t border-neutral-900 font-mono text-xs flex flex-wrap gap-4">
                     {project.links.map((link) => (
                       <a
                         key={link.url}
