@@ -246,9 +246,14 @@ export default async function Home() {
             <div className="font-mono text-xs text-[#0076DD] tracking-wider uppercase">
               {"// 02. CORE PHILOSOPHY"}
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-100">
-              &quot;Commit Your Work.&quot;
-            </h2>
+            <div className="flex flex-wrap items-baseline gap-3">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-100">
+                &quot;Commit Your Work.&quot;
+              </h2>
+              <span className="font-mono text-xs text-neutral-600 tracking-wider">
+                Proverbs 16:3
+              </span>
+            </div>
             <div className="space-y-4 text-neutral-400 text-base md:text-lg leading-relaxed pt-2">
               <p>
                 <strong className="text-neutral-100 font-semibold">솔리드랩 (SolidLab)</strong>은
